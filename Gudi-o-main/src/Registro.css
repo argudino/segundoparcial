@@ -1,0 +1,162 @@
+/* Registro.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);
+}
+
+::selection {
+  background: #ff80bf;
+}
+
+.container {
+  background: #fff;
+
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container form .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.container form .title:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);
+}
+
+/* Estilos específicos para el formulario de registro */
+.container form .input-box label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.container form .input-box input {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  margin-top: 5px;
+}
+
+.container form .input-box .underline::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+
+.container form .input-box .underline::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .input-box.button {
+  margin: 40px 0 20px 0;
+}
+
+.container .input-box input[type="submit"] {
+  background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .input-box input[type="submit"]:hover {
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);
+}
+
+
+
+    /* Registro.css */
+
+/* Estilos para el elemento select */
+.container form .input-box select {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    color: #000;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .container form .input-box select:focus {
+    border-color: #3fb6be;
+  }
+  
+  /* Estilo para los elementos de opción del select */
+  .container form .input-box select option {
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  /* Estilo para el texto de "Selecciona una opción" */
+  .container form .input-box select option[disabled] {
+    color: #999; /* Puedes ajustar el color a tu preferencia */
+  }
+  
+  /* Estilo para el borde inferior del select */
+  .container form .input-box select ~ .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .container form .input-box select:focus ~ .underline::before {
+    background: #3fb6be; /* Cambiar el color del borde inferior cuando está enfocado */
+  }
+  
